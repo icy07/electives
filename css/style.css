@@ -231,6 +231,9 @@ body {
 
 .header__right img {
   max-width: 100%;
+  min-width: 18.75rem;
+  -webkit-animation: animateCircle 50s linear forwards infinite;
+          animation: animateCircle 50s linear forwards infinite;
 }
 
 .footer {
@@ -462,12 +465,18 @@ body {
   margin: 0px 0px 0.625rem 0px;
 }
 
-.elective-block__description p {
+.elective-block__description p,
+.elective-block__description ul {
   line-height: 120%;
 }
 
-.elective-block__description p:not(:last-child) {
+.elective-block__description p:not(:last-child),
+.elective-block__description ul:not(:last-child) {
   margin-bottom: 0.9375rem;
+}
+
+.elective-block__description p._bold {
+  font-weight: 600;
 }
 
 .questions {
@@ -563,9 +572,10 @@ body {
 
 .elective {
   margin-top: -4.1875rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.0625rem;
 }
 
@@ -576,7 +586,6 @@ body {
 }
 
 .elective__author {
-  max-width: 36.1875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -614,8 +623,7 @@ body {
   line-height: 120%;
 }
 
-.elective__annotation {
-  max-width: 31.25rem;
+.elective__text-block {
   padding: 1.5rem 1.0625rem;
 }
 
@@ -623,14 +631,12 @@ body {
   text-align: center;
   color: #666;
   text-decoration: underline;
-  font-size: 1.25rem;
   font-family: "Jost";
   margin: 0px 0px 1.0625rem 0px;
 }
 
 .elective__text p {
-  text-align: center;
-  font-size: 1rem;
+  text-align: justify;
   line-height: 120%;
 }
 
@@ -638,9 +644,27 @@ body {
   margin-bottom: 0.9375rem;
 }
 
+.elective__text p._bold {
+  font-weight: 600;
+}
+
+.elective__text ol,
+.elective__text ul {
+  line-height: 120%;
+}
+
+.elective__text ol li:not(:last-child),
+.elective__text ul li:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.elective__text ol {
+  padding: 0px 0px 0px 1.25rem;
+}
+
 .elective__info {
   padding: 1.5rem 1.0625rem;
-  max-width: 16rem;
+  max-width: 18.75rem;
   width: 100%;
 }
 
@@ -681,7 +705,7 @@ body {
   }
 
   .header__title {
-    font-size: 6rem;
+    font-size: 5.625rem;
   }
 
   .header__subtitle {
@@ -689,7 +713,7 @@ body {
   }
 
   .header--elective {
-    padding-bottom: 8.75rem;
+    padding-bottom: 10rem;
   }
 
   .footer {
@@ -876,11 +900,31 @@ body {
   .elective__subtitle {
     font-size: 1.25rem;
   }
+
+  .elective__block-title {
+    font-size: 1.25rem;
+  }
+
+  .elective__text p {
+    font-size: 1rem;
+  }
+
+  .elective__text ol,
+  .elective__text ul {
+    font-size: 1rem;
+  }
 }
 
 @media (max-width: 85em) {
   .elective {
     margin-top: -2.5rem;
+  }
+}
+
+@media (max-width: 81.25em) {
+  .elective {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -909,7 +953,7 @@ body {
     margin-top: -2.8125rem;
   }
 
-  .elective__annotation {
+  .elective__text-block {
     max-width: 100%;
   }
 
@@ -938,6 +982,7 @@ body {
 @media (max-width: 62.5em) {
   .header__right img {
     width: 12.5rem;
+    min-width: none;
   }
 
   .electives__blocks {
@@ -1208,6 +1253,19 @@ body {
   .elective__subtitle {
     font-size: 1rem;
   }
+
+  .elective__block-title {
+    font-size: 1.125rem;
+  }
+
+  .elective__text p {
+    font-size: 0.75rem;
+  }
+
+  .elective__text ol,
+  .elective__text ul {
+    font-size: 0.75rem;
+  }
 }
 
 @media (min-width: 20em)and (max-width: 108.125em) {
@@ -1235,15 +1293,15 @@ body {
     }
 }
 
-@supports (font-size: clamp( 2rem , 1.0921985816rem  +  4.5390070922vw , 6rem )) {
+@supports (font-size: clamp( 2rem , 1.1773049645rem  +  4.1134751773vw , 5.625rem )) {
     .header__title {
-      font-size: clamp( 2rem , 1.0921985816rem  +  4.5390070922vw , 6rem );
+      font-size: clamp( 2rem , 1.1773049645rem  +  4.1134751773vw , 5.625rem );
     }
 }
 
-@supports not (font-size: clamp( 2rem , 1.0921985816rem  +  4.5390070922vw , 6rem )) {
+@supports not (font-size: clamp( 2rem , 1.1773049645rem  +  4.1134751773vw , 5.625rem )) {
     .header__title {
-      font-size: calc(2rem + 4*(100vw - 20rem)/88.125);
+      font-size: calc(2rem + 3.625*(100vw - 20rem)/88.125);
     }
 }
 
@@ -1259,15 +1317,15 @@ body {
     }
 }
 
-@supports (padding-bottom: clamp( 1.25rem , -0.4521276596rem  +  8.5106382979vw , 8.75rem )) {
+@supports (padding-bottom: clamp( 1.25rem , -0.7358156028rem  +  9.9290780142vw , 10rem )) {
     .header--elective {
-      padding-bottom: clamp( 1.25rem , -0.4521276596rem  +  8.5106382979vw , 8.75rem );
+      padding-bottom: clamp( 1.25rem , -0.7358156028rem  +  9.9290780142vw , 10rem );
     }
 }
 
-@supports not (padding-bottom: clamp( 1.25rem , -0.4521276596rem  +  8.5106382979vw , 8.75rem )) {
+@supports not (padding-bottom: clamp( 1.25rem , -0.7358156028rem  +  9.9290780142vw , 10rem )) {
     .header--elective {
-      padding-bottom: calc(1.25rem + 7.5*(100vw - 20rem)/88.125);
+      padding-bottom: calc(1.25rem + 8.75*(100vw - 20rem)/88.125);
     }
 }
 
@@ -1822,6 +1880,44 @@ body {
 @supports not (font-size: clamp( 1rem , 0.9432624113rem  +  0.2836879433vw , 1.25rem )) {
     .elective__subtitle {
       font-size: calc(1rem + 0.25*(100vw - 20rem)/88.125);
+    }
+}
+
+@supports (font-size: clamp( 1.125rem , 1.0966312057rem  +  0.1418439716vw , 1.25rem )) {
+    .elective__block-title {
+      font-size: clamp( 1.125rem , 1.0966312057rem  +  0.1418439716vw , 1.25rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.125rem , 1.0966312057rem  +  0.1418439716vw , 1.25rem )) {
+    .elective__block-title {
+      font-size: calc(1.125rem + 0.125*(100vw - 20rem)/88.125);
+    }
+}
+
+@supports (font-size: clamp( 0.75rem , 0.6932624113rem  +  0.2836879433vw , 1rem )) {
+    .elective__text p {
+      font-size: clamp( 0.75rem , 0.6932624113rem  +  0.2836879433vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.75rem , 0.6932624113rem  +  0.2836879433vw , 1rem )) {
+    .elective__text p {
+      font-size: calc(0.75rem + 0.25*(100vw - 20rem)/88.125);
+    }
+}
+
+@supports (font-size: clamp( 0.75rem , 0.6932624113rem  +  0.2836879433vw , 1rem )) {
+    .elective__text ol,
+    .elective__text ul {
+      font-size: clamp( 0.75rem , 0.6932624113rem  +  0.2836879433vw , 1rem );
+    }
+}
+
+@supports not (font-size: clamp( 0.75rem , 0.6932624113rem  +  0.2836879433vw , 1rem )) {
+    .elective__text ol,
+    .elective__text ul {
+      font-size: calc(0.75rem + 0.25*(100vw - 20rem)/88.125);
     }
 }
 }
