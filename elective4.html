@@ -5,42 +5,74 @@
 	<title>Электив</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250313220002">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250321213211">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header header--elective">
+		<header class="header">
 			<div class="header__container">
-				<div class="header__left">
-					<h1 class="header__title header__title--bold">Финансовый детектив: раскрываем тайну денег</h1>
-					<p class="header__subtitle">Сам выбирай траекторию обучения и учись с удовольствием!</p>
-				</div>
-				<a href="index.html" class="header__right">
-					<img src="img/logo.svg" alt="logo">
+				<a href="index.html" class="header__logo">
+					<img src="img/logo.svg" alt="ДГТУ">
 				</a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" data-goto="#info" class="menu__link">Что это такое?</a></li>
+							<li class="menu__item"><a href="#" data-goto="#electives" class="menu__link">Все элективы</a></li>
+							<li class="menu__item"><a href="#" data-goto="#questions" class="menu__link">Вопросы и ответы</a></li>
+						</ul>
+						<a href="#" class="header__btn _icon-mail">Связаться с нами</a>
+					</nav>
+				</div>
 			</div>
 		</header>
 		<main class="page">
 			<div class="page__container">
 				<section class="elective">
-					<div class="elective__author">
-						<div class="elective__img">
-							<picture><source srcset="img/teachers/4.webp" type="image/webp"><img src="img/teachers/4.png" alt="4"></picture>
+					<div class="elective__left">
+						<div class="elective__img-block">
+							<a href="#" data-popup="#teacherInfo" class="elective__info-btn">i</a>
+							<picture><source srcset="img/teachers/4.webp" type="image/webp"><img src="img/teachers/4.png" alt="Шашло Нина Владимировна"></picture>
 						</div>
-						<p class="elective__name">
-							Шашло Нина Владимировна
-						</p>
-						<p class="elective__subtitle">
-							Начальник отдела ядерной программы <br>
-							Доцент кафедры медиатехнологий
-						</p>
+						<p class="elective__name">Шашло Нина Владимировна</p>
+						<p class="elective__job-title">Начальник отдела ядерной программы <br>
+							Доцент кафедры медиатехнологий</p>
 					</div>
-					<!-- <div class="elective__double-block">
-						<div class="elective__annotation" data-simplebar>
-							<p class="elective__block-title">Описание курса</p>
-							<div class="elective__text">
+					<div class="elective__right">
+						<div class="elective__elective-name-block">
+							<p class="elective__elective-name">
+								Финансовый детектив: раскрываем тайну денег
+							</p>
+							<p class="elective__elective-subtitle">
+								Сам выбирай траекторию обучения <br> и учись с удовольствием!
+							</p>
+						</div>
+						<div class="elective__info">
+							<div class="elective__info-block">
+								<p class="elective__info-title">Вид контроля:</p>
+								<p class="elective__info-text">зачёт</p>
+							</div>
+							<div class="elective__info-block">
+								<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
+								<p class="elective__info-text">2</p>
+							</div>
+							<div class="elective__info-block">
+								<p class="elective__info-title">Формат:</p>
+								<p class="elective__info-text">Офлайн</p>
+							</div>
+							<div class="elective__info-block">
+								<p class="elective__info-title">Место проведения:</p>
+								<p class="elective__info-text">
+									Главный корпус (пл.Гагарина 1)
+								</p>
+							</div>
+						</div>
+						<div class="elective__description">
+							<p class="elective__description-title">Об элективе:</p>
+							<div class="elective__description-wrapper">
 								<p>
 									Быть финансово грамотным — необходимость, продиктованная временем. Умение правильно
 									вкладывать деньги и анализировать
@@ -49,7 +81,8 @@
 									необходимые знания и практические навыки, а также повысить квалификацию в вопросах
 									инвестирования и управления личными
 									финансами.
-									Вы узнаете, кто управляет деньгами мира, как контролировать расходы и доходы, научитесь вести
+									Вы узнаете, кто управляет деньгами мира, как контролировать расходы и доходы, научитесь
+									вести
 									учёт доходов и расходов,
 									выгодно использовать кредиты и господдержку, узнаете как получить максимум льгот от
 									государства, как грамотно
@@ -65,34 +98,52 @@
 								</p>
 							</div>
 						</div>
-						<div class="elective__info">
-							<p class="elective__block-title">Другая информация</p>
-							<div class="elective__info-blocks">
-								<div class="elective__info-block">
-									<p class="elective__info-title">Вид контроля:</p>
-									<p class="elective__info-text">зачёт</p>
-								</div>
-								<div class="elective__info-block">
-									<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-									<p class="elective__info-text">2</p>
-								</div>
-								<div class="elective__info-block">
-									<p class="elective__info-title">Формат проведения:</p>
-									<p class="elective__info-text">Офлайн</p>
-								</div>
-								<div class="elective__info-block">
-									<p class="elective__info-title">Место проведения:</p>
-									<p class="elective__info-text">
-										<img src="img/location.svg" alt="location">
-										Главный корпус (пл.Гагарина 1)
-									</p>
-								</div>
-							</div>
-						</div>
-					</div> -->
-					<div class="elective__author-info" data-simplebar>
-						<p class="elective__block-title">Образование:</p>
-						<div class="elective__text">
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<nav class="footer__nav">
+					<a href="#" class="footer__logo">
+						<img src="img/logoWhite.svg" alt="ДГТУ">
+					</a>
+					<ul class="footer__list">
+						<li class="footer__item"><a href="#" data-goto="#info">Что это такое?</a></li>
+						<li class="footer__item"><a href="#" data-goto="#electives">Все элективы</a></li>
+						<li class="footer__item"><a href="#" data-goto="#questions">Вопросы и ответы</a></li>
+					</ul>
+					<a href="#" class="footer__btn _icon-mail">Связаться с нами</a>
+				</nav>
+				<div class="footer__bottom">
+					<div class="footer__bottom-block">
+						<p class="footer__subtitle">Руководитель:</p>
+						<p class="footer__title">Елена Михайловна Жданова</p>
+						<a href="tel:+79885175636" class="footer__number">+7 988 517 56 36</a>
+					</div>
+					<div class="footer__bottom-block">
+						<p class="footer__subtitle">Сотрудники:</p>
+						<p class="footer__title">Лолита Вадимовна Безъязыкова</p>
+						<a href="tel:+79185921335" class="footer__number">+7 918 592 13 35</a>
+					</div>
+					<div class="footer__bottom-block">
+						<p class="footer__subtitle">Адрес:</p>
+						<p class="footer__title">Аудитория: 1-256</p>
+						<p class="footer__number">37-69 2381-769</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<div id="teacherInfo" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__main" data-simplebar>
+					<div class="popup__block">
+						<p class="popup__block-title">Образование:</p>
+						<div class="popup__text">
 							<ol>
 								<li>
 									2006 год
@@ -121,8 +172,10 @@
 								</li>
 							</ol>
 						</div>
-						<p class="elective__block-title">Работа в университете:</p>
-						<div class="elective__text">
+					</div>
+					<div class="popup__block">
+						<p class="popup__block-title">Профессиональный опыт:</p>
+						<div class="popup__text">
 							<ol>
 								<li>
 									2023 год
@@ -134,9 +187,11 @@
 								</li>
 							</ol>
 						</div>
-						<p class="elective__block-title">Данные о повышении квалификации и (или) о профессиональной
+					</div>
+					<div class="popup__block">
+						<p class="popup__block-title">Данные о повышении квалификации и (или) о профессиональной
 							подготовке:</p>
-						<div class="elective__text">
+						<div class="popup__text">
 							<ol>
 								<li>
 									2019 г. - ФГБОУ ВО «Владивостокский государственный университет экономики и сервиса»,
@@ -176,8 +231,10 @@
 								</li>
 							</ol>
 						</div>
-						<p class="elective__block-title">Научные интересы:</p>
-						<div class="elective__text">
+					</div>
+					<div class="popup__block">
+						<p class="popup__block-title">Научные интересы:</p>
+						<div class="popup__text">
 							<p>
 								Инновационное управление институциональными преобразованиями в сложных социально-экономических
 								системах (регионы,
@@ -187,49 +244,12 @@
 							</p>
 						</div>
 					</div>
-				</section>
-			</div>
-		</main>
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__left">
-					<div class="footer__block">
-						<p>
-							Руководитель
-						</p>
-						<p>
-							Елена Михайловна Жданова
-						</p>
-						<a href="tel:+79885175636">
-							+7 988 517 56 36
-						</a>
-					</div>
-					<div class="footer__block">
-						<p>
-							Сотрудники:
-						</p>
-						<p>
-							Лолита Вадимовна Безъязыкова
-						</p>
-						<a href="tel:+79185921335">
-							+7 918 592 13 35
-						</a>
-					</div>
-				</div>
-				<div class="footer__right">
-					<div class="footer__block">
-						<p>
-							Аудитория: 1-256
-						</p>
-						<p>
-							Внутренний номер: 37-69 2381-769
-						</p>
-					</div>
 				</div>
 			</div>
-		</footer>
+		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250313220002"></script>
+
+	<script src="js/app.min.js?_v=20250321213211"></script>
 </body>
 
 </html>

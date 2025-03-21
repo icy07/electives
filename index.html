@@ -5,47 +5,93 @@
 	<title>Главная</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250313220002">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250321213211">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 	<div class="wrapper">
-		<header class="header ">
+		<header class="header">
 			<div class="header__container">
-				<div class="header__left">
-					<h1 class="header__title ">Центр элективных модулей</h1>
-					<p class="header__subtitle">Сам выбирай траекторию обучения и учись с удовольствием!</p>
-				</div>
-				<a href="index.html" class="header__right">
-					<img src="img/logo.svg" alt="logo">
+				<a href="index.html" class="header__logo">
+					<img src="img/logo.svg" alt="ДГТУ">
 				</a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="#" data-goto="#info" class="menu__link">Что это такое?</a></li>
+							<li class="menu__item"><a href="#" data-goto="#electives" class="menu__link">Все элективы</a></li>
+							<li class="menu__item"><a href="#" data-goto="#questions" class="menu__link">Вопросы и ответы</a></li>
+						</ul>
+						<a href="#" class="header__btn _icon-mail">Связаться с нами</a>
+					</nav>
+				</div>
 			</div>
 		</header>
 		<main class="page">
 			<div class="page__container">
-				<section class="electives">
-					<div class="electives__header">
-						<p>
-							Расширяй горизонты - выбирай своё
-						</p>
+				<section class="information">
+					<div class="information__main">
+						<div class="information__main-wrapper">
+							<h1 class="information__title">Центр элективных модулей</h1>
+							<p class="information__subtitle">Сам выбирай траекторию обучения <br> и учись с удовольствием!</p>
+							<a href="#" data-goto="#electives" class="information__btn _icon-arrowBtn">Узнать подробнее</a>
+						</div>
 					</div>
+					<div class="information__steps">
+						<div class="information__step">
+							<p class="information__step-number">Шаг 1</p>
+							<p class="information__step-text">
+								Ты выбираешь интересующие тебя направления, отмечая приоритеты
+							</p>
+						</div>
+						<div class="information__step">
+							<p class="information__step-number">Шаг 2</p>
+							<p class="information__step-text">
+								Проходишь лекции, выполняешь задания и набираешь баллы
+							</p>
+						</div>
+						<div class="information__step">
+							<p class="information__step-number">Шаг 3</p>
+							<p class="information__step-text">
+								Сдаёшь итоговый проект, который показывает, как ты освоил материал
+							</p>
+						</div>
+					</div>
+				</section>
+				<section class="info-text" id="info">
+					<h2 class="info-text__title">Что такое элективы?</h2>
+					<p class="info-text__text">
+						<span>Элективы</span> — это дисциплины по выбору, которые, являются обязательной частью учебной
+						программы.
+						Они&nbsp;дополняют основное образование, способствуя развитию soft skills, позволяя углубляться в те
+						области, которые вам
+						наиболее интересны и получать навыки, которые помогут вам стать конкурентноспособным на рынке согласно
+						последним
+						тенденциям
+					</p>
+				</section>
+				<section class="electives" id="electives">
 					<div class="electives__search-block">
 						<div class="electives__search-input">
 							<p>Поиск по автору курса:</p>
-							<input autocomplete="off" type="text" name="teacherName" placeholder="ФИО" class="electives__input">
+							<div class="electives__input _icon-search">
+								<input autocomplete="off" type="text" name="teacherName" placeholder="ФИО автора курса">
+							</div>
 						</div>
 						<div class="electives__search-input">
 							<p>Поиск по названию:</p>
-							<input autocomplete="off" type="text" name="electiveName" placeholder="Название" class="electives__input">
+							<div class="electives__input _icon-search">
+								<input autocomplete="off" type="text" name="electiveName" placeholder="Название курса">
+							</div>
 						</div>
-						<button class="electives__btn">сбросить фильтр</button>
+						<button class="electives__btn">Сбросить фильтр</button>
 					</div>
 					<div class="electives__blocks">
 						<a href="elective2.html" class="electives__block elective-block">
 							<p class="elective-block__title">Ключевые проблемы современности</p>
 							<div class="elective-block__author">
-								<p>Автор курса:</p>
 								<div class="elective-block__author-block">
 									<div class="elective-block__img">
 										<picture><source srcset="img/teachers/1.webp" type="image/webp"><img src="img/teachers/1.jpg" alt="1"></picture>
@@ -56,67 +102,68 @@
 									</div>
 								</div>
 							</div>
-							<div class="elective__info">
-								<div class="elective__info-blocks">
-									<div class="elective__info-block">
-										<p class="elective__info-title">Вид контроля:</p>
-										<p class="elective__info-text">зачёт</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-										<p class="elective__info-text">2</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Формат проведения:</p>
-										<p class="elective__info-text">Офлайн</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Место проведения:</p>
-										<p class="elective__info-text">
-											<img src="img/location.svg" alt="location">
-											Главный корпус (пл.Гагарина 1)
-										</p>
-									</div>
+							<div class="elective-block__info">
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Вид контроля:</p>
+									<p class="elective-block__info-text">зачёт</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Трудоёмкость, ЗЕ:</p>
+									<p class="elective-block__info-text">2</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Формат:</p>
+									<p class="elective-block__info-text">Офлайн</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Место проведения:</p>
+									<p class="elective-block__info-text">
+										Главный корпус (пл.Гагарина 1)
+									</p>
 								</div>
 							</div>
 							<div class="elective-block__description">
-								<p>
-									Целью курса является стимулирование навыков студентов к рефлексии об общественных проблемах
-								</p>
-								<p class="_bold">
-									Задачи курса:
-								</p>
-								<ul>
-									<li>
-										- формирование понимания у студентов сложности общественных проблем;
-									</li>
-									<li>
-										- способствование решению комплексных проблем в обществе;
-									</li>
-									<li>
-										- формирование способностей к пониманию мира как комплекса явлений и их взаимосвязей;
-									</li>
-									<li>
-										- развитие навыков критического осмысления и публичной критики;
-									</li>
-									<li>
-										- развитие навыков письменных и устных коммуникаций.
-									</li>
-								</ul>
-								<p>
-									Курс построен на методичном просмотре, обсуждении фильмов в аудитории и написании
-									критических
-									рефлексирующих работ дома.
-									Каждый фильм разбирается с точки зрения какой-то отдельной общественной темы (автономия
-									индивида, независимость прессы,
-									постправда, моральные паники, капитализм платформ) с дальнейшим обсуждением и прочтением
-									литературного произведения по
-									тематике фильма и дальнейшим написанием эссе-рефлексии.
-									Коллективный просмотр в аудитории стимулирует к критическому отношению и просмотру фильма
-									не
-									как эстетического продукта,
-									а как к некоему идеологическому высказыванию.
-								</p>
+								<p class="elective-block__description-title">Об элективе:</p>
+								<div class="elective-block__description-wrapper">
+									<p>
+										Целью курса является стимулирование навыков студентов к рефлексии об общественных
+										проблемах
+									</p>
+									<p>
+										Задачи курса:
+									</p>
+									<ul>
+										<li>
+											- формирование понимания у студентов сложности общественных проблем;
+										</li>
+										<li>
+											- способствование решению комплексных проблем в обществе;
+										</li>
+										<li>
+											- формирование способностей к пониманию мира как комплекса явлений и их взаимосвязей;
+										</li>
+										<li>
+											- развитие навыков критического осмысления и публичной критики;
+										</li>
+										<li>
+											- развитие навыков письменных и устных коммуникаций.
+										</li>
+									</ul>
+									<p>
+										Курс построен на методичном просмотре, обсуждении фильмов в аудитории и написании
+										критических
+										рефлексирующих работ дома.
+										Каждый фильм разбирается с точки зрения какой-то отдельной общественной темы (автономия
+										индивида, независимость прессы,
+										постправда, моральные паники, капитализм платформ) с дальнейшим обсуждением и прочтением
+										литературного произведения по
+										тематике фильма и дальнейшим написанием эссе-рефлексии.
+										Коллективный просмотр в аудитории стимулирует к критическому отношению и просмотру фильма
+										не
+										как эстетического продукта,
+										а как к некоему идеологическому высказыванию.
+									</p>
+								</div>
 							</div>
 						</a>
 						<a href="elective5.html" class="electives__block elective-block">
@@ -124,7 +171,6 @@
 								Инструменты продвижения в digital-среде
 							</p>
 							<div class="elective-block__author">
-								<p>Автор курса:</p>
 								<div class="elective-block__author-block">
 									<div class="elective-block__img">
 										<picture><source srcset="img/teachers/5.webp" type="image/webp"><img src="img/teachers/5.jpg" alt="5"></picture>
@@ -137,40 +183,41 @@
 									</div>
 								</div>
 							</div>
-							<div class="elective__info">
-								<div class="elective__info-blocks">
-									<div class="elective__info-block">
-										<p class="elective__info-title">Вид контроля:</p>
-										<p class="elective__info-text">зачёт</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-										<p class="elective__info-text">2</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Формат проведения:</p>
-										<p class="elective__info-text">Офлайн</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Место проведения:</p>
-										<p class="elective__info-text">
-											<img src="img/location.svg" alt="location">
-											Главный корпус (пл.Гагарина 1)
-										</p>
-									</div>
+							<div class="elective-block__info">
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Вид контроля:</p>
+									<p class="elective-block__info-text">зачёт</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Трудоёмкость, ЗЕ:</p>
+									<p class="elective-block__info-text">2</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Формат:</p>
+									<p class="elective-block__info-text">Офлайн</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Место проведения:</p>
+									<p class="elective-block__info-text">
+										Главный корпус (пл.Гагарина 1)
+									</p>
 								</div>
 							</div>
 							<div class="elective-block__description">
-								<p>
-									Слушатели курса узнают, что такое инструменты продвижения в цифровых коммуникациях. Как
-									происходит продвижение медийных
-									проектов на всех этапах: от инициирования и планирования до завершения и отчётности. Студенты
-									научатся ставить цели и
-									задачи продвижения, разрабатывать планы и гипотезы, собирать команды и распределять роли,
-									контролировать ход работ,
-									обрабатывать и анализировать обратную связь, а также формулировать выводы и отчитываться о
-									результатах.
-								</p>
+								<p class="elective-block__description-title">Об элективе:</p>
+								<div class="elective-block__description-wrapper">
+									<p>
+										Слушатели курса узнают, что такое инструменты продвижения в цифровых коммуникациях. Как
+										происходит продвижение медийных
+										проектов на всех этапах: от инициирования и планирования до завершения и отчётности.
+										Студенты
+										научатся ставить цели и
+										задачи продвижения, разрабатывать планы и гипотезы, собирать команды и распределять роли,
+										контролировать ход работ,
+										обрабатывать и анализировать обратную связь, а также формулировать выводы и отчитываться о
+										результатах.
+									</p>
+								</div>
 							</div>
 						</a>
 						<a href="elective4.html" class="electives__block elective-block">
@@ -178,7 +225,6 @@
 								Финансовый детектив: раскрываем тайну денег
 							</p>
 							<div class="elective-block__author">
-								<p>Автор курса:</p>
 								<div class="elective-block__author-block">
 									<div class="elective-block__img">
 										<picture><source srcset="img/teachers/4.webp" type="image/webp"><img src="img/teachers/4.png" alt="4"></picture>
@@ -192,58 +238,58 @@
 									</div>
 								</div>
 							</div>
-							<div class="elective__info">
-								<div class="elective__info-blocks">
-									<div class="elective__info-block">
-										<p class="elective__info-title">Вид контроля:</p>
-										<p class="elective__info-text">зачёт</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-										<p class="elective__info-text">2</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Формат проведения:</p>
-										<p class="elective__info-text">Офлайн</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Место проведения:</p>
-										<p class="elective__info-text">
-											<img src="img/location.svg" alt="location">
-											Главный корпус (пл.Гагарина 1)
-										</p>
-									</div>
+							<div class="elective-block__info">
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Вид контроля:</p>
+									<p class="elective-block__info-text">зачёт</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Трудоёмкость, ЗЕ:</p>
+									<p class="elective-block__info-text">2</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Формат:</p>
+									<p class="elective-block__info-text">Офлайн</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Место проведения:</p>
+									<p class="elective-block__info-text">
+										Главный корпус (пл.Гагарина 1)
+									</p>
 								</div>
 							</div>
 							<div class="elective-block__description">
-								<p>
-									Быть финансово грамотным — необходимость, продиктованная временем. Умение правильно
-									вкладывать деньги и анализировать
-									экономическую ситуацию является одним из важных качеств современного человека. Данный курс
-									поможет приобрести
-									необходимые знания и практические навыки, а также повысить квалификацию в вопросах
-									инвестирования и управления личными
-									финансами.
-									Вы узнаете, кто управляет деньгами мира, как контролировать расходы и доходы, научитесь вести
-									учёт доходов и расходов,
-									выгодно использовать кредиты и господдержку, узнаете как получить максимум льгот от
-									государства, как грамотно
-									инвестировать, как получать легальный доход от акций, облигаций, паевых фондов и других
-									инвестиционных инструментов.
-									Разберётесь, как получить налоговый вычет за покупку недвижимости, образование и лечение.
-									Научитесь делать это онлайн —
-									без беготни по инстанциям. Научитесь создать финансовую подушку, изучите инструменты, с
-									помощью которых сможете накопить
-									на крупную покупку. Поймёте, как грамотно откладывать деньги и обеспечите себе безбедное
-									будущее. Поставите личные
-									финансовые цели и разработаете стратегию, чтобы их достичь.
-								</p>
+								<p class="elective-block__description-title">Об элективе:</p>
+								<div class="elective-block__description-wrapper">
+									<p>
+										Быть финансово грамотным — необходимость, продиктованная временем. Умение правильно
+										вкладывать деньги и анализировать
+										экономическую ситуацию является одним из важных качеств современного человека. Данный курс
+										поможет приобрести
+										необходимые знания и практические навыки, а также повысить квалификацию в вопросах
+										инвестирования и управления личными
+										финансами.
+										Вы узнаете, кто управляет деньгами мира, как контролировать расходы и доходы, научитесь
+										вести
+										учёт доходов и расходов,
+										выгодно использовать кредиты и господдержку, узнаете как получить максимум льгот от
+										государства, как грамотно
+										инвестировать, как получать легальный доход от акций, облигаций, паевых фондов и других
+										инвестиционных инструментов.
+										Разберётесь, как получить налоговый вычет за покупку недвижимости, образование и лечение.
+										Научитесь делать это онлайн —
+										без беготни по инстанциям. Научитесь создать финансовую подушку, изучите инструменты, с
+										помощью которых сможете накопить
+										на крупную покупку. Поймёте, как грамотно откладывать деньги и обеспечите себе безбедное
+										будущее. Поставите личные
+										финансовые цели и разработаете стратегию, чтобы их достичь.
+									</p>
+								</div>
 							</div>
 						</a>
 						<a href="elective3.html" class="electives__block elective-block">
 							<p class="elective-block__title">Диалог искусств</p>
 							<div class="elective-block__author">
-								<p>Автор курса:</p>
 								<div class="elective-block__author-block">
 									<div class="elective-block__img">
 										<picture><source srcset="img/teachers/3.webp" type="image/webp"><img src="img/teachers/3.jpg" alt="3"></picture>
@@ -254,40 +300,40 @@
 									</div>
 								</div>
 							</div>
-							<div class="elective__info">
-								<div class="elective__info-blocks">
-									<div class="elective__info-block">
-										<p class="elective__info-title">Вид контроля:</p>
-										<p class="elective__info-text">зачёт</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-										<p class="elective__info-text">2</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Формат проведения:</p>
-										<p class="elective__info-text">Офлайн</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Место проведения:</p>
-										<p class="elective__info-text">
-											<img src="img/location.svg" alt="location">
-											Главный корпус (пл.Гагарина 1)
-										</p>
-									</div>
+							<div class="elective-block__info">
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Вид контроля:</p>
+									<p class="elective-block__info-text">зачёт</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Трудоёмкость, ЗЕ:</p>
+									<p class="elective-block__info-text">2</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Формат:</p>
+									<p class="elective-block__info-text">Офлайн</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Место проведения:</p>
+									<p class="elective-block__info-text">
+										Главный корпус (пл.Гагарина 1)
+									</p>
 								</div>
 							</div>
 							<div class="elective-block__description">
-								<p>
-									Студенты научатся интерпретировать основныме термины данного модуля, научатся
-									интерпретировать
-									художественные тексты, а также
-									выстраивать диалог между ними. Овладеют научным и смысловым инструментарием для анализа и
-									синтеза различных направлений
-									в искусстве. Научатся читать язык архитектуры, литературы, театра, моды, кино, музыкальных
-									произведений и живописи,
-									применяя один из методов познания - творческий.
-								</p>
+								<p class="elective-block__description-title">Об элективе:</p>
+								<div class="elective-block__description-wrapper">
+									<p>
+										Студенты научатся интерпретировать основныме термины данного модуля, научатся
+										интерпретировать
+										художественные тексты, а также
+										выстраивать диалог между ними. Овладеют научным и смысловым инструментарием для анализа и
+										синтеза различных направлений
+										в искусстве. Научатся читать язык архитектуры, литературы, театра, моды, кино, музыкальных
+										произведений и живописи,
+										применяя один из методов познания - творческий.
+									</p>
+								</div>
 							</div>
 						</a>
 						<a href="elective6.html" class="electives__block elective-block">
@@ -295,7 +341,6 @@
 								Медиамаркетинг
 							</p>
 							<div class="elective-block__author">
-								<p>Автор курса:</p>
 								<div class="elective-block__author-block">
 									<div class="elective-block__img">
 										<picture><source srcset="img/teachers/5.webp" type="image/webp"><img src="img/teachers/5.jpg" alt="5"></picture>
@@ -308,37 +353,37 @@
 									</div>
 								</div>
 							</div>
-							<div class="elective__info">
-								<div class="elective__info-blocks">
-									<div class="elective__info-block">
-										<p class="elective__info-title">Вид контроля:</p>
-										<p class="elective__info-text">зачёт</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-										<p class="elective__info-text">2</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Формат проведения:</p>
-										<p class="elective__info-text">Офлайн</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Место проведения:</p>
-										<p class="elective__info-text">
-											<img src="img/location.svg" alt="location">
-											Главный корпус (пл.Гагарина 1)
-										</p>
-									</div>
+							<div class="elective-block__info">
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Вид контроля:</p>
+									<p class="elective-block__info-text">зачёт</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Трудоёмкость, ЗЕ:</p>
+									<p class="elective-block__info-text">2</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Формат:</p>
+									<p class="elective-block__info-text">Офлайн</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Место проведения:</p>
+									<p class="elective-block__info-text">
+										Главный корпус (пл.Гагарина 1)
+									</p>
 								</div>
 							</div>
 							<div class="elective-block__description">
-								<p>
-									Курс знакомит студентов с основами современного маркетинга в медиа индустрии. На примере
-									реальных кейсодателей студенты
-									научатся проводить ситуационный и конкурентный анализ, описывать ЦА, разработают
-									маркетинговую стратегию,
-									коммуникационныц план, определят правильные KPI.
-								</p>
+								<p class="elective-block__description-title">Об элективе:</p>
+								<div class="elective-block__description-wrapper">
+									<p>
+										Курс знакомит студентов с основами современного маркетинга в медиа индустрии. На примере
+										реальных кейсодателей студенты
+										научатся проводить ситуационный и конкурентный анализ, описывать ЦА, разработают
+										маркетинговую стратегию,
+										коммуникационныц план, определят правильные KPI.
+									</p>
+								</div>
 							</div>
 						</a>
 						<a href="elective7.html" class="electives__block elective-block">
@@ -346,7 +391,6 @@
 								Мировая история правящих династий прошлого
 							</p>
 							<div class="elective-block__author">
-								<p>Автор курса:</p>
 								<div class="elective-block__author-block">
 									<div class="elective-block__img">
 										<picture><source srcset="img/teachers/6.webp" type="image/webp"><img src="img/teachers/6.jpg" alt="6"></picture>
@@ -359,53 +403,57 @@
 									</div>
 								</div>
 							</div>
-							<div class="elective__info">
-								<div class="elective__info-blocks">
-									<div class="elective__info-block">
-										<p class="elective__info-title">Вид контроля:</p>
-										<p class="elective__info-text">зачёт</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-										<p class="elective__info-text">2</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Формат проведения:</p>
-										<p class="elective__info-text">Офлайн</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Место проведения:</p>
-										<p class="elective__info-text">
-											<img src="img/location.svg" alt="location">
-											Главный корпус (пл.Гагарина 1)
-										</p>
-									</div>
+							<div class="elective-block__info">
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Вид контроля:</p>
+									<p class="elective-block__info-text">зачёт</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Трудоёмкость, ЗЕ:</p>
+									<p class="elective-block__info-text">2</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Формат:</p>
+									<p class="elective-block__info-text">Офлайн</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Место проведения:</p>
+									<p class="elective-block__info-text">
+										Главный корпус (пл.Гагарина 1)
+									</p>
 								</div>
 							</div>
 							<div class="elective-block__description">
-								<p>
-									Современные границы государств и стратегии их внешней политики, во многом предопределяются
-									историей их эволюционного
-									формирования и преобразования на различных исторических этапах. Существенное влияние на эти
-									процессы, как правило,
-									оказывали личностные особенности, способности и поступки конкретных правителей различных эпох
-									на территориях этих
-									государств и вне их, которые и предопределяли целевые ориентиры политического доминирующего
-									или соподчинённого
-									дальнейшего существования. В этом модуле будут рассматриваться фундаментальные исторические
-									этапы трансформации
-									государств, в периоды управления ими представителями единых правящих династий, оказавших
-									основное влияние на этапе их
-									геополитического становления в общем или в конкретных экстра-неординарных исторических
-									ситуациях.
-									Студенты будут изучать и критически анализировать предлагаемые к рассмотрению государства на
-									различных исторических
-									этапах (срезах) и поступки их правителей, выявляя основные достоинства и недостатки в
-									принятых решениях и поступках
-									представителей правящих династий, повышая тем самым свою эрудицию, развивая логику и
-									аналитическое мышление.
-
-								</p>
+								<p class="elective-block__description-title">Об элективе:</p>
+								<div class="elective-block__description-wrapper">
+									<p>
+										Современные границы государств и стратегии их внешней политики, во многом предопределяются
+										историей их эволюционного
+										формирования и преобразования на различных исторических этапах. Существенное влияние на
+										эти
+										процессы, как правило,
+										оказывали личностные особенности, способности и поступки конкретных правителей различных
+										эпох
+										на территориях этих
+										государств и вне их, которые и предопределяли целевые ориентиры политического
+										доминирующего
+										или соподчинённого
+										дальнейшего существования. В этом модуле будут рассматриваться фундаментальные
+										исторические
+										этапы трансформации
+										государств, в периоды управления ими представителями единых правящих династий, оказавших
+										основное влияние на этапе их
+										геополитического становления в общем или в конкретных экстра-неординарных исторических
+										ситуациях.
+										Студенты будут изучать и критически анализировать предлагаемые к рассмотрению государства
+										на
+										различных исторических
+										этапах (срезах) и поступки их правителей, выявляя основные достоинства и недостатки в
+										принятых решениях и поступках
+										представителей правящих династий, повышая тем самым свою эрудицию, развивая логику и
+										аналитическое мышление.
+									</p>
+								</div>
 							</div>
 						</a>
 						<a href="elective8.html" class="electives__block elective-block">
@@ -413,7 +461,6 @@
 								Истории развития государств в гипотезах и фактах
 							</p>
 							<div class="elective-block__author">
-								<p>Автор курса:</p>
 								<div class="elective-block__author-block">
 									<div class="elective-block__img">
 										<picture><source srcset="img/teachers/6.webp" type="image/webp"><img src="img/teachers/6.jpg" alt="6"></picture>
@@ -426,66 +473,71 @@
 									</div>
 								</div>
 							</div>
-							<div class="elective__info">
-								<div class="elective__info-blocks">
-									<div class="elective__info-block">
-										<p class="elective__info-title">Вид контроля:</p>
-										<p class="elective__info-text">зачёт</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-										<p class="elective__info-text">2</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Формат проведения:</p>
-										<p class="elective__info-text">Офлайн</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Место проведения:</p>
-										<p class="elective__info-text">
-											<img src="img/location.svg" alt="location">
-											Главный корпус (пл.Гагарина 1)
-										</p>
-									</div>
+							<div class="elective-block__info">
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Вид контроля:</p>
+									<p class="elective-block__info-text">зачёт</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Трудоёмкость, ЗЕ:</p>
+									<p class="elective-block__info-text">2</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Формат:</p>
+									<p class="elective-block__info-text">Офлайн</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Место проведения:</p>
+									<p class="elective-block__info-text">
+										Главный корпус (пл.Гагарина 1)
+									</p>
 								</div>
 							</div>
 							<div class="elective-block__description">
-								<p>
-									Стратегии современных государств с агрессивной внешней политикой во многом базируются на
-									исторически консервативных
-									принципах, частью которых являются ситуации, когда управление общественным мнением
-									осуществляется на основе средств
-									массовой дезинформации. Согласованную политику различных СМИ разных стран в части
-									предоставления неточной информации в
-									целях массового управления общественным сознанием уже можно отнести к элементу
-									дезинформационной монополии или
-									информационному сговору (или заговору), преследующему определенные цели. В эпоху интернета и
-									других высокоскоростных
-									средств передачи информации (СМИ), почти не подвергаемых цензуре с позиций достоверности,
-									единственным средством её
-									оценки индивидуумом является его способность к её (информации) анализу. Эта способность, в
-									первую очередь, базируется на
-									сопоставлении используемых событий с контекстами смежных с ними фактов и гипотез. В этом
-									модуле будут рассматриваться
-									теории и гипотезы примеров трактовки исторических событий, на развитие которых в определенном
-									плане оказала существенное
-									влияние дезинформация о предшествующих событиях, либо сами события могли бы не менее логично
-									объясняться посредством
-									альтернативных гипотез или трактовок исторических фактов, имеющих право на существование. В
-									общей истории и политической
-									истории государств, результаты подобных манипуляций с искажением достоверной информации о
-									них, часто приводили к
-									глобальным последствиям, некоторые примеры которых будут системно представлены в курсе.
-									Некоторые разделы курса покажут,
-									что не все известные исторические события и в настоящее время принято трактовать однозначно
-									верно.
-									Студенты будут изучать и критически анализировать, повышая тем самым свою эрудицию и развивая
-									логику, предлагаемые к
-									рассмотрению исторические ситуации системного внедрения дезинформации на различных
-									исторических этапах, в целях полного
-									или частичного достижения политических, экономических и иных целей.
-
-								</p>
+								<p class="elective-block__description-title">Об элективе:</p>
+								<div class="elective-block__description-wrapper">
+									<p>
+										Стратегии современных государств с агрессивной внешней политикой во многом базируются на
+										исторически консервативных
+										принципах, частью которых являются ситуации, когда управление общественным мнением
+										осуществляется на основе средств
+										массовой дезинформации. Согласованную политику различных СМИ разных стран в части
+										предоставления неточной информации в
+										целях массового управления общественным сознанием уже можно отнести к элементу
+										дезинформационной монополии или
+										информационному сговору (или заговору), преследующему определенные цели. В эпоху интернета
+										и
+										других высокоскоростных
+										средств передачи информации (СМИ), почти не подвергаемых цензуре с позиций достоверности,
+										единственным средством её
+										оценки индивидуумом является его способность к её (информации) анализу. Эта способность, в
+										первую очередь, базируется на
+										сопоставлении используемых событий с контекстами смежных с ними фактов и гипотез. В этом
+										модуле будут рассматриваться
+										теории и гипотезы примеров трактовки исторических событий, на развитие которых в
+										определенном
+										плане оказала существенное
+										влияние дезинформация о предшествующих событиях, либо сами события могли бы не менее
+										логично
+										объясняться посредством
+										альтернативных гипотез или трактовок исторических фактов, имеющих право на существование.
+										В
+										общей истории и политической
+										истории государств, результаты подобных манипуляций с искажением достоверной информации о
+										них, часто приводили к
+										глобальным последствиям, некоторые примеры которых будут системно представлены в курсе.
+										Некоторые разделы курса покажут,
+										что не все известные исторические события и в настоящее время принято трактовать
+										однозначно
+										верно.
+										Студенты будут изучать и критически анализировать, повышая тем самым свою эрудицию и
+										развивая
+										логику, предлагаемые к
+										рассмотрению исторические ситуации системного внедрения дезинформации на различных
+										исторических этапах, в целях полного
+										или частичного достижения политических, экономических и иных целей.
+									</p>
+								</div>
 							</div>
 						</a>
 						<a href="elective9.html" class="electives__block elective-block">
@@ -493,7 +545,6 @@
 								Астрофизика
 							</p>
 							<div class="elective-block__author">
-								<p>Автор курса:</p>
 								<div class="elective-block__author-block">
 									<div class="elective-block__img">
 										<picture><source srcset="img/teachers/7.webp" type="image/webp"><img src="img/teachers/7.jpg" alt="7"></picture>
@@ -507,47 +558,47 @@
 									</div>
 								</div>
 							</div>
-							<div class="elective__info">
-								<div class="elective__info-blocks">
-									<div class="elective__info-block">
-										<p class="elective__info-title">Вид контроля:</p>
-										<p class="elective__info-text">зачёт</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-										<p class="elective__info-text">2</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Формат проведения:</p>
-										<p class="elective__info-text">Офлайн</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Место проведения:</p>
-										<p class="elective__info-text">
-											<img src="img/location.svg" alt="location">
-											Главный корпус (пл.Гагарина 1)
-										</p>
-									</div>
+							<div class="elective-block__info">
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Вид контроля:</p>
+									<p class="elective-block__info-text">зачёт</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Трудоёмкость, ЗЕ:</p>
+									<p class="elective-block__info-text">2</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Формат:</p>
+									<p class="elective-block__info-text">Офлайн</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Место проведения:</p>
+									<p class="elective-block__info-text">
+										Главный корпус (пл.Гагарина 1)
+									</p>
 								</div>
 							</div>
 							<div class="elective-block__description">
-								<p>
-									Астрофизика, бурно развивающаяся в XXI веке отрасль естествознания, составляет основу
-									научного мировоззрения, развитие
-									которого необходимо в образовательном процессе будущих инженеров. Понимание процессов,
-									протекающих в окружающем нас
-									мегамире и их роли в процессах на Земле дает возможность выпускникам вузов ориентироваться в
-									материальной компоненте
-									техники и технологий. Цель модуля: усвоение знаний о строении и эволюции Вселенной; умений
-									ориентироваться в звездном
-									небе, навыков использования астрофизической платформы Stellarium
-								</p>
+								<p class="elective-block__description-title">Об элективе:</p>
+								<div class="elective-block__description-wrapper">
+									<p>
+										Астрофизика, бурно развивающаяся в XXI веке отрасль естествознания, составляет основу
+										научного мировоззрения, развитие
+										которого необходимо в образовательном процессе будущих инженеров. Понимание процессов,
+										протекающих в окружающем нас
+										мегамире и их роли в процессах на Земле дает возможность выпускникам вузов ориентироваться
+										в
+										материальной компоненте
+										техники и технологий. Цель модуля: усвоение знаний о строении и эволюции Вселенной; умений
+										ориентироваться в звездном
+										небе, навыков использования астрофизической платформы Stellarium
+									</p>
+								</div>
 							</div>
 						</a>
 						<a href="elective.html" class="electives__block elective-block">
 							<p class="elective-block__title">Дизайн-мышление или как научиться генерировать идеи</p>
 							<div class="elective-block__author">
-								<p>Автор курса:</p>
 								<div class="elective-block__author-block">
 									<div class="elective-block__img">
 										<picture><source srcset="img/teachers/2.webp" type="image/webp"><img src="img/teachers/2.jpg" alt="2"></picture>
@@ -558,62 +609,47 @@
 									</div>
 								</div>
 							</div>
-							<div class="elective__info">
-								<div class="elective__info-blocks">
-									<div class="elective__info-block">
-										<p class="elective__info-title">Вид контроля:</p>
-										<p class="elective__info-text">зачёт</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Трудоемкость,ЗЕ:</p>
-										<p class="elective__info-text">2</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Формат проведения:</p>
-										<p class="elective__info-text">Офлайн</p>
-									</div>
-									<div class="elective__info-block">
-										<p class="elective__info-title">Место проведения:</p>
-										<p class="elective__info-text">
-											<img src="img/location.svg" alt="location">
-											Главный корпус (пл.Гагарина 1)
-										</p>
-									</div>
+							<div class="elective-block__info">
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Вид контроля:</p>
+									<p class="elective-block__info-text">зачёт</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Трудоёмкость, ЗЕ:</p>
+									<p class="elective-block__info-text">2</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Формат:</p>
+									<p class="elective-block__info-text">Офлайн</p>
+								</div>
+								<div class="elective-block__info-block">
+									<p class="elective-block__info-title">Место проведения:</p>
+									<p class="elective-block__info-text">
+										Главный корпус (пл.Гагарина 1)
+									</p>
 								</div>
 							</div>
 							<div class="elective-block__description">
-								<p>
-									Электив предназначен для формирования у студентов междисциплинарной компетенции "Креативное
-									мышление"
-								</p>
+								<p class="elective-block__description-title">Об элективе:</p>
+								<div class="elective-block__description-wrapper">
+									<p>
+										Электив предназначен для формирования у студентов междисциплинарной компетенции
+										"Креативное
+										мышление"
+									</p>
+								</div>
 							</div>
 						</a>
 					</div>
-					<ul class="electives__nav">
-						<li>
-							&#60;-
-						</li>
-						<li class="_active">1</li>
-						<li>
-							<a href="#">2</a>
-						</li>
-						<li>
-							<a href="#">3</a>
-						</li>
-						<li>
-							<a href="#">
-								-&#62;
-							</a>
-						</li>
-					</ul>
+					<button class="electives__more-btn">Показать ещё</button>
 				</section>
-				<section class="questions">
-					<h2 class="questions__title">Частые задаваемые вопросы</h2>
+				<section class="questions" id="questions">
+					<h2 class="questions__title">Вопросы и ответы</h2>
 					<div data-spollers class="questions__spollers spollers">
 						<div class="spollers__item">
 							<button data-spoller class="spollers__title">
-								А это обязательно?
-								<div class="spollers__plus"></div>
+								Элективы - это обязательно?
+								<div class="spollers__arrow _icon-arrow"></div>
 							</button>
 							<div class="spollers__body">
 								<p>
@@ -626,7 +662,7 @@
 						<div class="spollers__item">
 							<button data-spoller class="spollers__title">
 								Что если не выбрать электив?
-								<div class="spollers__plus"></div>
+								<div class="spollers__arrow _icon-arrow"></div>
 							</button>
 							<div class="spollers__body">
 								<p>
@@ -641,7 +677,7 @@
 						<div class="spollers__item">
 							<button data-spoller class="spollers__title">
 								А пройденные элективы потом будут где-то указаны?
-								<div class="spollers__plus"></div>
+								<div class="spollers__arrow _icon-arrow"></div>
 							</button>
 							<div class="spollers__body">
 								<p>
@@ -654,7 +690,7 @@
 						<div class="spollers__item">
 							<button data-spoller class="spollers__title">
 								Как нас распределяют по элективам?
-								<div class="spollers__plus"></div>
+								<div class="spollers__arrow _icon-arrow"></div>
 							</button>
 							<div class="spollers__body">
 								<p>
@@ -670,44 +706,38 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="footer__left">
-					<div class="footer__block">
-						<p>
-							Руководитель
-						</p>
-						<p>
-							Елена Михайловна Жданова
-						</p>
-						<a href="tel:+79885175636">
-							+7 988 517 56 36
-						</a>
+				<nav class="footer__nav">
+					<a href="#" class="footer__logo">
+						<img src="img/logoWhite.svg" alt="ДГТУ">
+					</a>
+					<ul class="footer__list">
+						<li class="footer__item"><a href="#" data-goto="#info">Что это такое?</a></li>
+						<li class="footer__item"><a href="#" data-goto="#electives">Все элективы</a></li>
+						<li class="footer__item"><a href="#" data-goto="#questions">Вопросы и ответы</a></li>
+					</ul>
+					<a href="#" class="footer__btn _icon-mail">Связаться с нами</a>
+				</nav>
+				<div class="footer__bottom">
+					<div class="footer__bottom-block">
+						<p class="footer__subtitle">Руководитель:</p>
+						<p class="footer__title">Елена Михайловна Жданова</p>
+						<a href="tel:+79885175636" class="footer__number">+7 988 517 56 36</a>
 					</div>
-					<div class="footer__block">
-						<p>
-							Сотрудники:
-						</p>
-						<p>
-							Лолита Вадимовна Безъязыкова
-						</p>
-						<a href="tel:+79185921335">
-							+7 918 592 13 35
-						</a>
+					<div class="footer__bottom-block">
+						<p class="footer__subtitle">Сотрудники:</p>
+						<p class="footer__title">Лолита Вадимовна Безъязыкова</p>
+						<a href="tel:+79185921335" class="footer__number">+7 918 592 13 35</a>
 					</div>
-				</div>
-				<div class="footer__right">
-					<div class="footer__block">
-						<p>
-							Аудитория: 1-256
-						</p>
-						<p>
-							Внутренний номер: 37-69 2381-769
-						</p>
+					<div class="footer__bottom-block">
+						<p class="footer__subtitle">Адрес:</p>
+						<p class="footer__title">Аудитория: 1-256</p>
+						<p class="footer__number">37-69 2381-769</p>
 					</div>
 				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20250313220002"></script>
+	<script src="js/app.min.js?_v=20250321213211"></script>
 </body>
 
 </html>
